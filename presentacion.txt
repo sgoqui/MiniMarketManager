@@ -2,3 +2,4 @@ Nombre: Steven Gomez Quintero
 Programa: Ingeniería de Sistemas
 Lenguaje elegido: Java
 Descripción del proyecto: Sistema de administración de ventas e inventario para un mini mercado.
+Fecha: 16/05/2026
