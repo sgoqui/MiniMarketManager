@@ -42,7 +42,8 @@ public class MiniMarketManager {
             System.out.println("4. Realizar venta");
             System.out.println("5. Mostrar total ventas");
             System.out.println("6. Calcular descuento");
-            System.out.println("7. Salir");
+            System.out.println("7. Calcular IVA");
+            System.out.println("8. Salir");
             System.out.println("====================================");
             System.out.print("Seleccione una opcion: ");
             opcion = entrada.nextInt();
@@ -195,8 +196,24 @@ public class MiniMarketManager {
                     System.out.println("Precio final con descuento: $" + resultado);
 
                     break;
-
+                    
                 case 7:
+
+                    System.out.println("\n--- CALCULAR IVA ---");
+
+                    System.out.print("Ingrese el precio del producto: ");
+                    double precioIVA = entrada.nextDouble();
+
+                    System.out.print("Ingrese el porcentaje de IVA: ");
+                    double iva = entrada.nextDouble();
+
+                    double totalIVA = calcularIVA(precioIVA, iva);
+
+                    System.out.println("Precio final con IVA: $" + totalIVA);
+
+                    break;
+
+                case 8:
 
                     System.out.println("\nGracias por usar Mini Market Manager.");
 
@@ -208,7 +225,7 @@ public class MiniMarketManager {
 
             }
 
-        } while (opcion != 7);
+        } while (opcion != 8);
 
     }
     
@@ -217,6 +234,15 @@ public static double calcularDescuento(double precio, double descuento) {
     double descuentoFinal = precio * (descuento / 100);
 
     double precioFinal = precio - descuentoFinal;
+
+    return precioFinal;
+}
+
+public static double calcularIVA(double precio, double iva) {
+
+    double valorIVA = precio * (iva / 100);
+
+    double precioFinal = precio + valorIVA;
 
     return precioFinal;
 }
