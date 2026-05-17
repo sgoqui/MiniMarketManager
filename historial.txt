@@ -1,0 +1,5 @@
+* ff2c82f feat: agregar función calcular IVA
+* e463089 feat: agregar funcion calcular descuento
+* d9c1c84 feat: agregar sistema base MiniMarketManager
+* 850cd0d docs: agregar fecha al archivo presentacion
+* 632657d feat: Agregar presentacion Estudiante
